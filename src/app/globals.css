@@ -13,6 +13,7 @@
   --color-destructive: var(--destructive);
   --color-muted: var(--muted);
   --color-primary: var(--primary);
+  --color-primary2: var(--primary2);
 }
 
 :root {
@@ -22,6 +23,7 @@
   --foreground: #ECEEFF;
   --foreground2: #8591FF;
   --primary: #10214B;
+  --primary2: #969CD1;
   --muted: #A9AABC;
   --destructive: oklch(0.577 0.245 27.325);
   --border: #969DC5;
