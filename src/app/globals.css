@@ -66,4 +66,8 @@
     .heading-margin-bottom {
         @apply mb-10 md:mb-20
     }
+
+    .menu-list {
+        @apply space-y-7 list-decimal list-inside
+    }
 }
