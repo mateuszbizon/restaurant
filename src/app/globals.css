@@ -14,13 +14,14 @@
   --color-muted: var(--muted);
   --color-primary: var(--primary);
   --color-primary2: var(--primary2);
+  --spacing-section-padding: var(--section-padding);
 }
 
 :root {
   --background-dark: #444D7C;
   --background: #4E588E;
   --background-light: #57629E;
-  --foreground: #ECEEFF;
+  --foreground: #F7F8FF;
   --foreground2: #8591FF;
   --primary: #10214B;
   --primary2: #969CD1;
@@ -29,6 +30,7 @@
   --border: #969DC5;
   --input: #969DC5;
   --ring: #10214B;
+  --section-padding: 5rem;
 }
 
 @layer base {
