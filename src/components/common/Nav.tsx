@@ -1,13 +1,18 @@
+"use client"
+
 import React from 'react'
 import Container from '../ui/container'
 import { NAV_ITEMS } from '@/constants/navItems'
 import NavCard from '../cards/NavCard'
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
+import useScroll from '@/lib/hooks/useScroll'
 
 function Nav() {
+    const { isScrolled } = useScroll({ scrollAmount: 50 })
+
   return (
-    <nav className='h-nav-height fixed top-0 w-full bg-transparent z-40'>
+    <nav className={`h-nav-height fixed top-0 w-full ${isScrolled ? "bg-background" : "bg-transparent"} z-40 transition`}>
         <Container>
             <div className='flex justify-between items-center h-full'>
                 <div>
