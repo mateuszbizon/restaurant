@@ -3,6 +3,7 @@ import React from 'react'
 import { Button, buttonVariants } from '../ui/button'
 import Link from 'next/link'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card'
+import { NavigationMenuContent, NavigationMenuLink, NavigationMenuTrigger, navigationMenuTriggerStyle } from '../ui/navigation-menu'
 
 type NavCardProps = {
     item: NavItem
@@ -12,20 +13,32 @@ function NavCard({ item }: NavCardProps) {
   return (
     <>
         {item.isLink ? (
-            <Button className='py-0 text-foreground hover:text-foreground2 text-lg' variant={"link"} asChild>
-                <Link href={item.href}>
-                    {item.label}
-                </Link>
-            </Button>
+            <NavigationMenuLink  asChild>
+                <Button className='py-0 px-6 text-foreground hover:text-foreground2 text-lg' variant={"link"} asChild>
+                    <Link href={item.href}>
+                        {item.label}
+                    </Link>
+                </Button>
+            </NavigationMenuLink>
         ) : (
-            <HoverCard>
-                <HoverCardTrigger className='py-0 text-foreground hover:text-foreground2 text-lg font-medium hover:cursor-default'>
+            <>
+                <NavigationMenuTrigger className={`${buttonVariants({ variant: "link" })} py-0 text-foreground hover:text-foreground2 text-lg`}>
                     Menu
-                </HoverCardTrigger>
-                <HoverCardContent>
-                    Content
-                </HoverCardContent>
-            </HoverCard>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                    <ul className='space-y-1'>
+                        {item.menu.map(menuItem =>  (
+                            <li key={menuItem.label}>
+                                <Button variant={"link"} className='text-foreground hover:text-foreground2 text-lg' asChild>
+                                    <Link href={menuItem.href}>
+                                        {menuItem.label}
+                                    </Link>
+                                </Button>
+                            </li>
+                        ))}
+                    </ul>
+                </NavigationMenuContent>
+            </>
         )}
     </>
   )

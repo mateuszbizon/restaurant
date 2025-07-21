@@ -7,6 +7,7 @@ import NavCard from '../cards/NavCard'
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
 import useScroll from '@/lib/hooks/useScroll'
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/navigation-menu'
 
 function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
@@ -19,13 +20,15 @@ function Nav() {
                     <span className='text-lg'>Restauracja & Pub</span>
                 </div>
                 <div className='hidden lg:block'>
-                    <ul className='flex'>
-                        {NAV_ITEMS.map(item => (
-                            <li key={item.label}>
-                                <NavCard item={item} />
-                            </li>
-                        ))}
-                    </ul>
+                    <NavigationMenu viewport={false}>
+                        <NavigationMenuList className='flex gap-0'>
+                            {NAV_ITEMS.map(item => (
+                                <NavigationMenuItem key={item.label}>
+                                    <NavCard item={item} />
+                                </NavigationMenuItem>
+                            ))}
+                        </NavigationMenuList>
+                    </NavigationMenu>
                 </div>
                 <div className='lg:hidden'>
                     <Button size={"icon"}>
