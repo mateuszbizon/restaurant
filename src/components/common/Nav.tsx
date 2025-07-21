@@ -12,7 +12,7 @@ function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
 
   return (
-    <nav className={`h-nav-height fixed top-0 w-full ${isScrolled ? "bg-background" : "bg-transparent"} z-40 transition`}>
+    <nav className={`h-nav-height fixed top-0 w-full ${isScrolled ? "bg-background" : "bg-transparent"} z-40 transition duration-300`}>
         <Container>
             <div className='flex justify-between items-center h-full'>
                 <div>
