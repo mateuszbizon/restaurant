@@ -2,8 +2,7 @@ import { NavItem } from '@/types'
 import React from 'react'
 import { Button, buttonVariants } from '../ui/button'
 import Link from 'next/link'
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card'
-import { NavigationMenuContent, NavigationMenuLink, NavigationMenuTrigger, navigationMenuTriggerStyle } from '../ui/navigation-menu'
+import { NavigationMenuContent, NavigationMenuLink, NavigationMenuTrigger } from '../ui/navigation-menu'
 
 type NavCardProps = {
     item: NavItem
