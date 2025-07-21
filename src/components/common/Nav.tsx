@@ -8,6 +8,7 @@ import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
 import useScroll from '@/lib/hooks/useScroll'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/navigation-menu'
+import NavMobile from './NavMobile'
 
 function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
@@ -31,9 +32,7 @@ function Nav() {
                     </NavigationMenu>
                 </div>
                 <div className='lg:hidden'>
-                    <Button size={"icon"}>
-                        <Menu />
-                    </Button>
+                    <NavMobile />
                 </div>
             </div>
         </Container>
