@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import Container from '../ui/container'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import { Instagram, Mail, Phone } from 'lucide-react'
 import { EMAIL, INSTA, PHONE } from '@/constants'
 import GoogleMap from '../ui/google-map'
+import { cn } from '@/lib/utils'
 
-function ContactSection() {
+type ContactSectionProps = ComponentProps<"section">
+
+function ContactSection({ className, ...props }: ContactSectionProps) {
   return (
-    <section className='pb-section-padding bg-foreground'>
+    <section className={cn('pb-section-padding bg-foreground', className)} {...props}>
         <Container>
             <div className='bg-foreground2 rounded-2xl p-5 md:p-10'>
                 <h2 className='heading2 mb-10'>Nasze dane kontaktowe oraz informacje</h2>
