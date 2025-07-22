@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../ui/container'
 import { Button } from '../ui/button'
 import Shadow from '../ui/shadow'
+import Link from 'next/link'
 
 function Hero() {
   return (
@@ -14,8 +15,10 @@ function Hero() {
                     Zapraszamy do miejsca, gdzie wyśmienita kuchnia spotyka się z wyjątkowym klimatem pubu. Poczuj domową atmosferę, spróbuj lokalnych specjałów i odpocznij przy barze.
                 </p>
                 <div>
-                    <Button size={"lg"} className='text-lg'>
-                        Nasze menu
+                    <Button size={"lg"} className='text-lg' asChild>
+                        <Link href={"/menu"}>
+                            Nasze menu
+                        </Link>
                     </Button>
                 </div>
             </div>
