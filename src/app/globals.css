@@ -14,6 +14,8 @@
   --color-muted: var(--muted);
   --color-primary: var(--primary);
   --color-primary2: var(--primary2);
+  --color-glovo-green: var(--glovo-green);
+  --color-glovo-yellow: var(--glovo-yellow);
   --spacing-section-padding: var(--section-padding);
   --spacing-nav-height: var(--nav-height);
 }
@@ -33,6 +35,8 @@
   --ring: #10214B;
   --section-padding: 5rem;
   --nav-height: 4rem;
+  --glovo-green: #00A082;
+  --glovo-yellow: #FFC244;
 }
 
 @layer base {

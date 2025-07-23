@@ -42,6 +42,11 @@ function NavMobile() {
                     </li>
                 ))}
             </ul>
+            <Button asChild>
+                <Link href={"https://glovoapp.com/pl/pl"} target='_blank'>
+                    Zamów teraz
+                </Link>
+            </Button>
         </SheetContent>
     </Sheet>
   )

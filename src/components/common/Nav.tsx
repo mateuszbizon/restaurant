@@ -8,6 +8,7 @@ import useScroll from '@/lib/hooks/useScroll'
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/navigation-menu'
 import NavMobile from './NavMobile'
 import Link from 'next/link'
+import { Button } from '../ui/button'
 
 function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
@@ -21,7 +22,7 @@ function Nav() {
                         <span className='text-lg'>Restauracja & Pub</span>
                     </Link>
                 </div>
-                <div className='hidden lg:block'>
+                <div className='hidden lg:flex'>
                     <NavigationMenu viewport={false}>
                         <NavigationMenuList className='flex gap-0'>
                             {NAV_ITEMS.map(item => (
@@ -31,6 +32,11 @@ function Nav() {
                             ))}
                         </NavigationMenuList>
                     </NavigationMenu>
+                    <Button className='ml-2' asChild>
+                        <Link href={"https://glovoapp.com/pl/pl"} target='_blank'>
+                            Zamów teraz
+                        </Link>
+                    </Button>
                 </div>
                 <div className='lg:hidden'>
                     <NavMobile />
