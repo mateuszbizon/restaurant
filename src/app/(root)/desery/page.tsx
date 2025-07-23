@@ -1,3 +1,4 @@
+import GlovoSection from '@/components/sections/GlovoSection'
 import MenuListSection from '@/components/sections/MenuListSection'
 import SubPageHero from '@/components/sections/SubPageHero'
 import { desserts } from '@/constants/menu'
@@ -8,6 +9,7 @@ function page() {
     <>
         <SubPageHero title='Desery' />
         <MenuListSection menu={desserts} />
+        <GlovoSection />
     </>
   )
 }
