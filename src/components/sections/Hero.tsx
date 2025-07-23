@@ -14,10 +14,15 @@ function Hero() {
                 <p className='bigger-text'>
                     Zapraszamy do miejsca, gdzie wyśmienita kuchnia spotyka się z wyjątkowym klimatem pubu. Poczuj domową atmosferę, spróbuj lokalnych specjałów i odpocznij przy barze.
                 </p>
-                <div>
+                <div className='flex gap-5 flex-wrap'>
                     <Button size={"lg"} className='text-lg' asChild>
                         <Link href={"/menu"}>
                             Nasze menu
+                        </Link>
+                    </Button>
+                    <Button size={"lg"} variant={"secondary"} className='text-lg' asChild>
+                        <Link href={"https://glovoapp.com/pl/pl"} target='_blank'>
+                            Zamów teraz
                         </Link>
                     </Button>
                 </div>
