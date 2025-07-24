@@ -3,6 +3,7 @@ import GlovoSection from "@/components/sections/GlovoSection";
 import Hero from "@/components/sections/Hero";
 import MenuSection from "@/components/sections/MenuSection";
 import PubSection from "@/components/sections/PubSection";
+import WhyUsSection from "@/components/sections/WhyUsSection";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
         <Hero />
         <MenuSection />
         <PubSection />
-        <ContactSection />
+        <WhyUsSection />
         <GlovoSection />
+        <ContactSection className="py-section-padding" />
     </>
   );
 }

@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { ComponentProps } from 'react'
 import Container from '../ui/container'
 import { Gamepad2, Smile, Users, UtensilsCrossed } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
-function WhyUsSection() {
+type WhyUsSectionProps = ComponentProps<'section'>
+
+function WhyUsSection({ className, ...props }: WhyUsSectionProps) {
   return (
-    <section className='pb-section-padding bg-foreground'>
+    <section className={cn('pb-section-padding bg-foreground', className)} {...props}>
         <Container>
             <div className='bg-background-dark rounded-2xl p-5 md:p-10'>
                 <h2 className='heading2 text-center heading-margin-bottom'>Dlaczego my?</h2>
