@@ -14,12 +14,12 @@ function Nav() {
     const { isScrolled } = useScroll({ scrollAmount: 50 })
 
   return (
-    <nav className={`h-nav-height fixed top-0 w-full ${isScrolled ? "bg-background" : "bg-transparent"} z-40 transition duration-300`}>
+    <nav className='h-nav-height fixed top-0 w-full z-40'>
         <Container>
-            <div className='flex justify-between items-center h-full'>
+            <div className='flex justify-between items-center h-full bg-background/80 rounded-4xl px-3'>
                 <div>
                     <Link href={"/"} title='Strona główna'>
-                        <span className='text-lg'>Restauracja & Pub</span>
+                        <span className='text-lg font-bold'>Restauracja & Pub</span>
                     </Link>
                 </div>
                 <div className='hidden lg:flex'>
@@ -32,7 +32,7 @@ function Nav() {
                             ))}
                         </NavigationMenuList>
                     </NavigationMenu>
-                    <Button className='ml-2' asChild>
+                    <Button className='ml-2 rounded-4xl' asChild>
                         <Link href={"https://glovoapp.com/pl/pl"} target='_blank'>
                             Zamów teraz
                         </Link>
