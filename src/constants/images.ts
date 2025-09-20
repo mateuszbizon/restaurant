@@ -29,3 +29,13 @@ export const RESTAURANT_IMG: Image = {
     src: "/restaurant.jpg",
     alt: "Restauracja",
 }
+
+export const RZUTKI_IMG: Image = {
+    src: "/rzutki.jpg",
+    alt: "Rzutki",
+}
+
+export const PING_PONG_IMG: Image = {
+    src: "/pingpong.jpg",
+    alt: "Ping pong",
+}
