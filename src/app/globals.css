@@ -70,7 +70,7 @@
     }
 
     .heading-margin-bottom {
-        @apply mb-10 md:mb-20
+        @apply mb-10 md:mb-15
     }
 
     .menu-list {

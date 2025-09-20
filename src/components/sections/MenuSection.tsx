@@ -11,6 +11,8 @@ import Desserts from '../common/Desserts'
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
+import { DRINK_IMG, FOOD_IMG } from '@/constants/images'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,7 +35,13 @@ function MenuSection() {
     }, [])
 
   return (
-    <section id='menu' className='py-section-padding'>
+    <section id='menu' className='relative py-section-padding'>
+        <figure className='absolute top-0 right-0 size-20 md:size-30 lg:size-40'>
+            <Image src={DRINK_IMG.src} alt={DRINK_IMG.alt} fill />
+        </figure>
+        <figure className='absolute -bottom-10 md:-bottom-15 lg:-bottom-20 left-0 size-20 md:size-30 lg:size-40'>
+            <Image src={FOOD_IMG.src} alt={FOOD_IMG.alt} fill />
+        </figure>
         <Container>
             <h2 className='heading2 text-center heading-margin-bottom'>Nasze menu</h2>
             <Tabs className='lg:flex-row gap-10' defaultValue='pizza'>
