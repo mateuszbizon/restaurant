@@ -11,15 +11,14 @@ type ContactSectionProps = ComponentProps<"section">
 
 function ContactSection({ className, ...props }: ContactSectionProps) {
   return (
-    <section className={cn('pb-section-padding bg-foreground', className)} {...props}>
+    <section className={cn('pb-section-padding bg-background', className)} {...props}>
         <Container>
-            <div className='bg-foreground2 rounded-2xl p-5 md:p-10'>
-                <h2 className='heading2 mb-10'>Nasze dane kontaktowe oraz informacje</h2>
+                <h2 className='heading2 text-center heading-margin-bottom'>Nasze dane kontaktowe oraz informacje</h2>
                 <div className='flex flex-col lg:flex-row gap-10'>
                     <div className='grow'>
                         <GoogleMap />
                     </div>
-                    <div className='lg:w-[500px] grid md:grid-cols-2 gap-5 md:gap-0 text-center md:text-left bg-background rounded-xl p-7'>
+                    <div className='lg:w-[500px] grid md:grid-cols-2 gap-5 md:gap-0 text-center md:text-left bg-background-light rounded-xl p-7'>
                         <div className='space-y-5'>
                             <h3 className='bigger-text'>Godziny otwarcia</h3>
                             <div className='little-bigger-text space-y-1'>
@@ -70,7 +69,6 @@ function ContactSection({ className, ...props }: ContactSectionProps) {
                         </div>
                     </div>
                 </div>
-            </div>
         </Container>
     </section>
   )
