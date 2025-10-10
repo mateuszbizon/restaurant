@@ -8,7 +8,7 @@ import { MENU_ITEMS, NAV_ITEMS } from '@/constants/navItems'
 
 function Footer() {
   return (
-    <footer className='pt-section-padding pb-10 bg-background'>
+    <footer className='pt-section-padding pb-10'>
         <Container>
             <div className='grid md:grid-cols-[repeat(auto-fit,_280px)] gap-10 md:gap-20'>
                 <div className='space-y-4 text-center md:text-left'>

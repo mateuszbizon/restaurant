@@ -28,3 +28,8 @@ export type NavItem = {
     isLink: false
     menu: NavLink[]
 })
+
+export type Image = {
+    src: string
+    alt: string
+}

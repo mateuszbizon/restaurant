@@ -62,7 +62,7 @@
     }
 
     .bigger-text {
-        @apply text-lg md:text-xl lg:text-2xl font-medium
+        @apply text-xl md:text-2xl font-medium
     }
 
     .little-bigger-text {
@@ -70,7 +70,7 @@
     }
 
     .heading-margin-bottom {
-        @apply mb-10 md:mb-20
+        @apply mb-10 md:mb-15
     }
 
     .menu-list {
