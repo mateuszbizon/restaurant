@@ -14,7 +14,7 @@ function WhyUsSection({ className, ...props }: WhyUsSectionProps) {
             <div className='bg-background rounded-2xl p-5 md:p-10'>
                 <div className='grid lg:grid-cols-2 gap-10'>
                     <div>
-                        <h2 className='heading2 heading-margin-bottom'>Dlaczego my?</h2>
+                        <h2 className='heading2 heading-margin-bottom text-center lg:text-left'>Dlaczego my?</h2>
                         <div className='space-y-10'>
                             <div className='flex flex-col lg:flex-row gap-5'>
                                 <div className='rounded-md p-3 text-black bg-[#5DECBF] flex justify-center items-center h-fit mx-auto'>
