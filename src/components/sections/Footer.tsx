@@ -88,9 +88,16 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='mt-section-padding flex justify-between items-center'>
+            <div className='mt-section-padding flex flex-col sm:flex-row justify-between gap-3 items-center'>
                 <p>
-                    &copy; {new Date().getFullYear()} | <span className='font-semibold'>Nazwa Firmy</span>
+                    &copy; {new Date().getFullYear()} | <span className='font-semibold'>Mateusz Bizoń</span>
+                </p>
+                <p>
+                    <Button variant={"link"} size={"link"} className='text-foreground hover:text-foreground/50' asChild>
+                        <Link href="https://www.mateuszbizonweb.pl" target='_blank'>
+                            Stworzone przez Matiego
+                        </Link>
+                    </Button>
                 </p>
             </div>
         </Container>
